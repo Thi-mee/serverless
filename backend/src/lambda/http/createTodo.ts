@@ -8,8 +8,8 @@ import { createTodo } from '../../businessLogic/todos'
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const newTodo: CreateTodoRequest = JSON.parse(event.body)
-
     
+    // TODO: Implement creating a new TODO item
     const createdTodo = await createTodo(newTodo, event)
 
     return {
